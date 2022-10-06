@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background-color: darkgrey;
+  }
+
+  th, td {
+    border: 1px solid grey;
+    text-align: center;
+  }
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+  margin-right: 4px;
+}
+
+.yellow-text {
+  background-color: yellow;
+}
+
+.rate-hover:hover {
+  cursor: pointer;
+}
+
+.cart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 2px solid darkslategray;
+  background-color: darkgray;
+  padding: 0 6px 6px 6px;
+  max-height: 500px;
+  overflow: auto;
+
+  @media screen and (max-width: 575px) {
+    max-height: 300px;
+  }
+
+  &-wrapper {
+    border-bottom: 1px solid grey;
+    padding: 8px;
+
+    div {
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    span:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &-last_item {
+    background-color: red;
+  }
+
+  &-sum {
+    font-size: 20px;
+  }
+
+  div:last-child {
+    margin-top: 6px;
+  }
+}
